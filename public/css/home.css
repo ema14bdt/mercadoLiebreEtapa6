@@ -1,0 +1,287 @@
+body {
+   background-color: var(--color-gris-claro);
+}
+
+/* header */
+
+header {
+   background-color: var(--color-amarillo);
+   padding: 1em 0;
+}
+
+.top-header {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 1rem;
+}
+
+.caja_logo {
+   width: 50%;
+   padding-right: 1rem;
+}
+
+.search {
+   width: 50%;
+   position: relative;
+}
+
+.search input {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #fff;
+   border-radius: 5px;
+   border-color: #fff;
+}
+
+.lupa {
+   order: 1px solid #fff;
+   border-radius: 5px;
+   border-color: #fff;
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 28px;
+   width: 28px;
+   border: none;
+   background-color: #fff;
+}
+
+.compra_cuotas {
+   width: 100%;
+   flex-direction: column;
+   font-size: 12px;
+   text-align: center;
+   margin-top: 15px;
+}
+
+.navbar {
+   display: none;
+}
+
+.navbar ul {
+   padding-left: 0;
+}
+
+.burguer-menu {
+   display: block;
+   margin: 5px auto;
+   background-color: var(--color-celeste);
+   border: none;
+   padding: 7px;
+   color: white;
+   border-radius: 4px;
+}
+
+.banner {
+   width: 100%;
+}
+
+/* main */
+
+
+.cuerpo {
+   width: 90vw;
+   margin: 0 5vw 0;
+   font-size: 12px;
+   background-color: var(--color-gris-claro);
+}
+
+.lastview,
+.offers {
+   margin-top: 1rem;
+}
+
+h2 {
+   margin-top: 1rem;
+   font-size: 24px;
+   color: var(--color-gris-oscuro);
+}
+
+.product {
+   background-color: white;
+   margin: 10px 0 10px;
+}
+
+.description {
+   position: relative;
+   border-top: 1px solid #ebebeb;
+   padding: 15px;
+   padding-bottom: 0;
+   display: flex;
+}
+
+main section article i {
+   display: block;
+   font-size: 16px;
+   padding: 5px;
+   width: 30px;
+   height: 30px;
+   border: 1px solid var(--color-verde);
+   background-color: #fff;
+   border-radius: 50%;
+   position: absolute;
+   right: 20px;
+   top: -15px;
+   color: var(--color-verde);
+   z-index: 1;
+}
+
+main section article i:hover {
+   animation: giraCamion 1.5s infinite;
+}
+
+@keyframes giraCamion {
+   100% {transform: rotate(360deg);}
+}
+
+.precio {
+   width: 35%;
+   margin-top: 16px;
+   margin-bottom: 0;
+   font-size: 18px;
+   align-items: center;
+}
+
+.descuento {
+   width: 65%;
+   margin-top: 17px;
+   margin-bottom: 0;
+   font-size: 16px;
+   color: var(--color-verde);
+}
+
+.nombre_producto {
+   display: none;
+   font-size: 16px;
+   padding: 15px;
+   color: var(--color-gris-oscuro);
+   font-weight: 400;
+   margin-bottom: 0;
+}
+
+/* footer */
+
+footer {
+   background-color: white;
+   text-align: center;
+   color: var(--color-gris-oscuro);
+}
+
+footer i {
+   color: var(--color-celeste);
+   font-size: 2em;
+   margin-top: 2em;
+   margin-bottom: 10px;
+}
+
+footer h4 {
+   font-size: large;
+}
+
+footer p {
+   font-size: 12px;
+   margin-left: 2em;
+   margin-right: 2em;
+}
+
+.copyright {
+   margin-top: 2em;
+   margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+   .logo {
+      width: 33vw;
+   }
+
+   .top-header {
+      margin-left: 1.5rem;
+   }
+
+   header ul {
+      list-style: none;
+      padding: 0px;
+   }
+
+   header a {
+      text-decoration: none;
+      color: black;
+      font-size: 12px;
+   }
+
+   .lastview,
+   .offers {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+   }
+
+   .burguer-menu {
+      display: none;
+   }
+
+   .navbar {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 5vw;
+      margin-right: 5vw;
+   }
+
+   .navbar ul {
+      display: flex;
+      margin-left: 0;
+   }
+
+   .navbar li:not(:last-child) {
+      margin-right: 16px;
+   }
+
+   .product {
+      width: calc((100% / 12) * 6 - 1rem);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      position: relative;
+   }
+
+   .product:hover {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   }
+
+   .caja_logo {
+      width: 100%;
+   }
+
+   .nombre_producto {
+      display: inline-block;
+      opacity: 0;
+   }
+
+   .nombre_producto:hover {
+      opacity: 1;
+   }
+
+   .caja_logo,
+   .search,
+   .compra_cuotas {
+      width: 33%;
+      align-items: center;
+   }
+}
+
+@media (min-width: 1024px) {
+   .product {
+      width: calc((100% / 12) * 3 - 1rem);
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+   }
+
+   .info_footer {
+      display: flex;
+   }
+
+   .icono_footer:hover{
+      color: var(--color-azul);
+   }
+}

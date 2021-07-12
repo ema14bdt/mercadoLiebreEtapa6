@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Registro</title>
+      <link rel="stylesheet" href="/css/styles.css" />
+      <script src="https://kit.fontawesome.com/9a95f588d1.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <header>
+         <div class="top-header">
+            <div class="caja_logo">
+               <a href="/"><img src="/images/logo-mercado-liebre.svg" alt="" /></a>
+            </div>
+            <form class="search">
+               <input type="search" placeholder="Buscar productos, marcas y algo mas..." />
+               <button class="lupa"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="compra_cuotas">
+               <span><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</span>
+            </div>
+         </div>
+
+         <nav>
+            <section class="navbar">
+               <ul>
+                  <li><a href="/ofertas">Ofertas</a></li>
+                  <li><a href="/tiendasoficiales">Tiendas Oficiales</a></li>
+                  <li><a href="/vender">Vender</a></li>
+                  <li><a href="/ayuda">Ayuda</a></li>
+               </ul>
+               <br />
+               <ul>
+                  <li><a href="/register">Crea tu cuenta </a><i class="far fa-id-card"></i></li>
+                  <li><a href="/login">Ingresa </a><i class="fas fa-sign-in-alt"></i></li>
+                  <li><a href="/compras">Mis compras </a><i class="fas fa-shopping-basket"></i></li>
+               </ul>
+            </section>
+         </nav>
+         <button class="burguer-menu">
+            <i class="fas fa-bars"></i>
+         </button>
+      </header>
+
+      <main class="register">
+         <form class="formulario" action="/" method="GET">
+            <h3>Registro:</h3>
+            <input
+               class="ingreso_datos"
+               type="text"
+               placeholder="Nombre y apellido"
+               pattern=".{4,40}"
+               title="Su nombre y apellido debe constar de al menos 4 carácteres"
+               required
+            />
+            <input class="ingreso_datos" type="text" placeholder="Nombre de usuario" required />
+            <input class="ingreso_datos" type="email" placeholder="E-mail" required />
+            <h4 for="">Fecha de nacimiento</h4>
+            <input class="ingreso_datos" type="date" required />
+            <input class="ingreso_datos" type="text" placeholder="Domicilio" required />
+            <h4 for="">Perfil de usuario</h4>
+            <div class="perfil_usuario">
+               <input type="radio" name="perfil_usuario" value="comprador" checked />
+               Comprador
+               <input type="radio" name="perfil_usuario" value="vendedor" />
+               Vendedor
+            </div>
+            <h4 for="intereses">Intereses</h4>
+            <div class="intereses">
+               <div class="intereses_opciones">
+                  <input type="checkbox" name="intereses" value="electro" />
+                  <label for="elevtro">Electro</label>
+               </div>
+               <div class="intereses_opciones">
+                  <input type="checkbox" name="intereses" value="moda" />
+                  <label for="elevtro">Moda</label>
+               </div>
+               <div class="intereses_opciones">
+                  <input type="checkbox" name="intereses" value="hogar" />
+                  <label for="elevtro">Hogar</label>
+               </div>
+               <div class="intereses_opciones">
+                  <input type="checkbox" name="intereses" value="jugueteria" />
+                  <label for="elevtro">Jugueteria</label>
+               </div>
+               <div class="intereses_opciones">
+                  <input type="checkbox" name="intereses" value="vida_sana" />
+                  <label for="elevtro">Vida Sana</label>
+               </div>
+            </div>
+            <h4 for="">Foto de perfil</h4>
+            <input class="ingreso_datos" type="file" name="perfil" accept=".jpg .png" />
+            <input class="ingreso_datos" type="password" placeholder="Contraseña" required />
+            <input class="ingreso_datos" type="password" placeholder="Confirmar contraseña" required />
+            <button class="button_register" type="submit">Registarse</button>
+            <button class="button_register reset" type="reset">Borrar todo</button>
+         </form>
+      </main>
+   </body>
+</html>
